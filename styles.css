@@ -45,6 +45,10 @@ input::placeholder {
 .check {
     padding: 1rem 2.5rem;
     margin-top: 5vh;
+    background-color: rgb(52, 170, 248);
+    border: none;
+    box-shadow: 3px 3px 8px rgba(63, 62, 62, 0.486);
+    display: block;
 }
 
 .output {
@@ -57,5 +61,37 @@ input::placeholder {
     .container {
         display: flex;
         flex-direction: row-reverse;
+        width: 80vw;
+        margin: 10vh auto;
+        background-color: thistle;
     }
+
+    .containertwo {
+        width: 70%;
+        text-align: left;
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        font-size: .7rem;
+    }
+
+    .image {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    input {
+        width: 50%;
+        padding: 15px;
+    }
+
+    .output {
+        width: 50%;
+    }
+    
 }

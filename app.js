@@ -10,10 +10,12 @@ function checkStockPerformance () {
     let quan = Number(quantity.value);
     let sp = Number(sellingPrice.value);
 
-    if(cp === '' || quan === '' || sp === '') {
+    if(costPrice.value === '' || quantity.value === '' || sellingPrice.value === '') {
         output.innerText = 'Please Input value to know your stock performance';
         output.style.color = 'red';
+        return;
     }
+     output.style.color = 'black';
 
     if(cp > sp) {
         let loss = (cp - sp ) * quan;
@@ -23,7 +25,7 @@ function checkStockPerformance () {
         let profit = (sp - cp) * quan;
         let profitPercentage = (((sp - cp) * 100) / cp).toFixed(2);
         output.innerHTML = `You're total profit is ${profit}$. You gain ${profitPercentage}% of your stocks.`
-    } else {
+    } else if (sp === cp) {
         output.innerHTML = `You're total profit is 0$. You gain 0.00% of your stocks.`
     }
 }

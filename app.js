@@ -3,6 +3,7 @@ const quantity = document.querySelector('.quantity');
 const sellingPrice = document.querySelector('.sellingprice');
 const checkButton = document.querySelector('.check');
 const output = document.querySelector('.output');
+const container = document.querySelector('.container');
 
 
 function checkStockPerformance () {
@@ -20,11 +21,18 @@ function checkStockPerformance () {
     if(cp > sp) {
         let loss = (cp - sp ) * quan;
         let lossPercent = (((cp - sp ) * 100) / cp).toFixed(2);
-        output.innerHTML = `You're total loss is ${loss}$. You lost ${lossPercent}% of your stocks.`
+        output.innerHTML = `You're total loss is ${loss}$. You lost ${lossPercent}% of your stocks.`;
+        document.body.classList.add('sadtheme');
+
     } else if (sp > cp) {
+
         let profit = (sp - cp) * quan;
         let profitPercentage = (((sp - cp) * 100) / cp).toFixed(2);
-        output.innerHTML = `You're total profit is ${profit}$. You gain ${profitPercentage}% of your stocks.`
+        output.innerHTML = `You're total profit is ${profit}$. You gain ${profitPercentage}% of your stocks.`;
+        document.body.classList.add('happytheme');
+        container.style.color = 'white';
+        output.style.color = 'white';
+        output.style.borderColor = 'white';
     } else if (sp === cp) {
         output.innerHTML = `You're total profit is 0$. You gain 0.00% of your stocks.`
     }

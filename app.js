@@ -16,6 +16,13 @@ function checkStockPerformance () {
         output.style.color = 'red';
         return;
     }
+
+    if(Math.sign(cp) === -1 || Math.sign(quan) === -1 || Math.sign(sp) === -1 || cp === 0 || sp === 0 || quan === 0) {
+        output.innerText = 'Please Input values greater than zero!';
+        output.style.color = 'red';
+        return;
+    }
+
      output.style.color = 'black';
 
     if(cp > sp) {
@@ -23,6 +30,8 @@ function checkStockPerformance () {
         let lossPercent = (((cp - sp ) * 100) / cp).toFixed(2);
         output.innerHTML = `You're total loss is ${loss}$. You lost ${lossPercent}% of your stocks.`;
         document.body.classList.add('sadtheme');
+        output.style.color = 'white';
+        output.style.borderColor = 'white';
 
     } else if (sp > cp) {
 
@@ -39,3 +48,5 @@ function checkStockPerformance () {
 }
 
 checkButton.addEventListener('click', checkStockPerformance);
+
+

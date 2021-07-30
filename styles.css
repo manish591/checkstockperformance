@@ -66,13 +66,11 @@ input::placeholder {
     color: white;
 }
 
-/* .sadtheme {
-
-} */
 
 .happytheme {
     background-image: url('https://media1.giphy.com/media/PMV7yRpwGO5y9p3DBx/giphy.gif?cid=ecf05e47qw5t77yqozeabk6ozks2hahqr3ezpsmk3j5vv0o9&rid=giphy.gif&ct=g');
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .sadtheme {
@@ -88,7 +86,7 @@ input::placeholder {
         flex-direction: row-reverse;
         width: 75vw;
         margin: 10vh auto;
-        background-color: thistle;
+        background-color: rgb(202, 170, 202);
     }
 
     .containertwo {

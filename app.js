@@ -7,6 +7,8 @@ const container = document.querySelector('.container');
 
 
 function checkStockPerformance () {
+    document.body.classList.remove('happytheme');
+    document.body.classList.remove('sadtheme');
     let cp = Number(costPrice.value);
     let quan = Number(quantity.value);
     let sp = Number(sellingPrice.value);

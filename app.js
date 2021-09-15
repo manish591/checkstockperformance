@@ -45,7 +45,7 @@ function checkStockPerformance () {
         output.style.color = 'white';
         output.style.borderColor = 'white';
     } else if (sp === cp) {
-        output.innerHTML = `You're total profit is 0$. You gain 0.00% of your stocks.`
+        output.innerHTML = `No profit No loss`;
     }
 }
 
